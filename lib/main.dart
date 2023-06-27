@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:usdcode/screen/mtn.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:usdcode/cubit/app_cubit.dart';
+import 'package:usdcode/cubit/app_cubit_logic.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const MtnScreen(),
+      home: BlocProvider<AppCubit>(
+        create: (context) => AppCubit(),
+        child: const AppCubitLogic(),
+      ),
     );
   }
 }

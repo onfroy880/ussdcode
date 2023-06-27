@@ -15,6 +15,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   url_launcher: ^6.0.20
   flutter_phone_direct_caller:
+  equatable:
+  flutter_bloc: 
+  bloc:
 
 dev_dependencies:
   flutter_test:
